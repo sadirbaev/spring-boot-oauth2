@@ -2,11 +2,11 @@ package uz.gilt.oauth2.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import uz.gilt.oauth2.entity.User;
+import uz.gilt.oauth2.entity.Role;
 
 import java.util.Optional;
 
 @Repository
-public interface UserRepository extends JpaRepository<User, Long> {
-    Optional<User> findByEmail(String email);
+public interface RoleRepository extends JpaRepository<Role, Long> {
+    Optional<Role> findByName(Role.ERole role);
 }
